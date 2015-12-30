@@ -1,0 +1,16 @@
+﻿
+CREATE PROCEDURE [dbo].[GetChildrenBeforeDelete]
+@Prefix nvarchar (850),
+@AuthType int
+AS
+SELECT C.PolicyID, C.Type, SD.NtSecDescPrimary
+FROM
+   Catalog AS C LEFT OUTER JOIN SecData AS SD ON C.PolicyID = SD.PolicyID AND SD.AuthType = @AuthType
+WHERE
+   C.Path LIKE @Prefix ESCAPE '*'  -- return children only, not item itself
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[GetChildrenBeforeDelete] TO [RSExecRole]
+    AS [dbo];
+

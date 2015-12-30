@@ -1,0 +1,34 @@
+﻿CREATE TABLE [dbo].[DataSource] (
+    [DSID]                                 UNIQUEIDENTIFIER NOT NULL,
+    [ItemID]                               UNIQUEIDENTIFIER NULL,
+    [SubscriptionID]                       UNIQUEIDENTIFIER NULL,
+    [Name]                                 NVARCHAR (260)   NULL,
+    [Extension]                            NVARCHAR (260)   NULL,
+    [Link]                                 UNIQUEIDENTIFIER NULL,
+    [CredentialRetrieval]                  INT              NULL,
+    [Prompt]                               NTEXT            NULL,
+    [ConnectionString]                     IMAGE            NULL,
+    [OriginalConnectionString]             IMAGE            NULL,
+    [OriginalConnectStringExpressionBased] BIT              NULL,
+    [UserName]                             IMAGE            NULL,
+    [Password]                             IMAGE            NULL,
+    [Flags]                                INT              NULL,
+    [Version]                              INT              NOT NULL,
+    CONSTRAINT [PK_DataSource] PRIMARY KEY CLUSTERED ([DSID] ASC),
+    CONSTRAINT [FK_DataSourceItemID] FOREIGN KEY ([ItemID]) REFERENCES [dbo].[Catalog] ([ItemID])
+);
+
+
+GO
+EXECUTE sp_tableoption @TableNamePattern = N'[dbo].[DataSource]', @OptionName = N'text in row', @OptionValue = N'256';
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_DataSourceItemID]
+    ON [dbo].[DataSource]([ItemID] ASC);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_DataSourceSubscriptionID]
+    ON [dbo].[DataSource]([SubscriptionID] ASC);
+

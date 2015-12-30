@@ -1,0 +1,32 @@
+﻿CREATE EXTERNAL TABLE [dbo].[ReportServerTempDB_SessionData] (
+    [SessionID]              VARCHAR (32)     NOT NULL,
+    [CompiledDefinition]     UNIQUEIDENTIFIER NULL,
+    [SnapshotDataID]         UNIQUEIDENTIFIER NULL,
+    [IsPermanentSnapshot]    BIT              NULL,
+    [ReportPath]             NVARCHAR (464)   NULL,
+    [Timeout]                INT              NOT NULL,
+    [AutoRefreshSeconds]     INT              NULL,
+    [Expiration]             DATETIME         NOT NULL,
+    [ShowHideInfo]           IMAGE            NULL,
+    [DataSourceInfo]         IMAGE            NULL,
+    [OwnerID]                UNIQUEIDENTIFIER NOT NULL,
+    [EffectiveParams]        NVARCHAR(4000)  NULL,
+    [CreationTime]           DATETIME         NOT NULL,
+    [HasInteractivity]       BIT              NULL,
+    [SnapshotExpirationDate] DATETIME         NULL,
+    [HistoryDate]            DATETIME         NULL,
+    [PageHeight]             FLOAT (53)       NULL,
+    [PageWidth]              FLOAT (53)       NULL,
+    [TopMargin]              FLOAT (53)       NULL,
+    [BottomMargin]           FLOAT (53)       NULL,
+    [LeftMargin]             FLOAT (53)       NULL,
+    [RightMargin]            FLOAT (53)       NULL,
+    [AwaitingFirstExecution] BIT              NULL,
+    [EditSessionID]          VARCHAR (32)     NULL,
+    [DataSetInfo]            VARBINARY (8000)  NULL,
+    [SitePath]               NVARCHAR (440)   NULL,
+    [SiteZone]               INT              NOT NULL,
+    [ReportDefinitionPath]   NVARCHAR (464)   NULL
+	)
+WITH ( 	DATA_SOURCE = ReportServerTempDB,	SCHEMA_Name='dbo',	Object_name='SessionData' ) 
+
