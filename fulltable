@@ -1,0 +1,543 @@
+{
+  "WebAuthoringVersion": "1.0",
+  "AutoRefresh": "0",
+  "DataSources": [
+    {
+      "Name": "DataSource1",
+      "ConnectionProperties": {
+        "DataProvider": "PBIDATASET",
+        "ConnectString": "Data Source=pbiazure://redirect.analysis.windows.net;Identity Provider=\"https://login.microsoftonline.com/common, https://analysis.windows.net/powerbi/api, cca790a4-264f-4f8d-af11-196797da4ee0\";Initial Catalog=sobe_wowvirtualserver-cca790a4-264f-4f8d-af11-196797da4ee0;Integrated Security=ClaimsToken"
+      }
+    }
+  ],
+  "ReportSections": [
+    {
+      "Body": {
+        "ReportItems": [
+          {
+            "Type": "Tablix",
+            "Name": "Tablix1",
+            "StyleName": "default",
+            "DataSetName": "DataSet1",
+            "TablixBody": {
+              "FieldSelections": [
+                {
+                  "EntityName": "Sales SalesTerritory",
+                  "PropertyName": "SalesYTD",
+                  "Aggregate": "Sum",
+                  "HideTotal": false
+                },
+                {
+                  "EntityName": "Sales SalesTerritory",
+                  "PropertyName": "TerritoryID",
+                  "Aggregate": "None"
+                }
+              ],
+              "TablixColumns": [
+                {
+                  "Width": "47.625mm"
+                },
+                {
+                  "Width": "47.625mm"
+                }
+              ],
+              "TablixRows": [
+                {
+                  "Height": "0.25in",
+                  "TablixCells": [
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textbox86de9434416d4707a571cdaecc00ec72",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "SalesYTD",
+                                  "Style": {
+                                    "FontFamily": "Segoe UI Semibold",
+                                    "FontSize": "11pt",
+                                    "Color": "=Variables!Style_FontColorHeaders.Value",
+                                    "Format": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Style": "None"
+                            },
+                            "BottomBorder": {
+                              "Color": "=Variables!Style_OutlineColor.Value",
+                              "Style": "=If(Variables!Style_HeaderEnableBorderBottom.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=If(Variables!Style_HeaderBorderBottomWeight.Value = \"\",             Variables!Style_GridHorizontalWeight.Value, Variables!Style_HeaderBorderBottomWeight.Value)"
+                            },
+                            "LeftBorder": {
+                              "Color": "=Variables!Style_BackColorHeaders.Value",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=Variables!Style_BackColorHeaders.Value",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "2pt",
+                            "PaddingTop": "4pt",
+                            "PaddingBottom": "2pt"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true,
+                          "UserSort": {
+                            "SortExpression": {
+                              "Value": "=Fields!Sales_20_SalesTerritory_SalesYTD.Value"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textbox0ff013823bdd4a6cb9417683b25fbf39",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "TerritoryID",
+                                  "Style": {
+                                    "FontFamily": "Segoe UI Semibold",
+                                    "FontSize": "11pt",
+                                    "Color": "=Variables!Style_FontColorHeaders.Value",
+                                    "Format": "0"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Style": "None"
+                            },
+                            "BottomBorder": {
+                              "Color": "=Variables!Style_OutlineColor.Value",
+                              "Style": "=If(Variables!Style_HeaderEnableBorderBottom.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=If(Variables!Style_HeaderBorderBottomWeight.Value = \"\",             Variables!Style_GridHorizontalWeight.Value, Variables!Style_HeaderBorderBottomWeight.Value)"
+                            },
+                            "LeftBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=Variables!Style_BackColorHeaders.Value",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "2pt",
+                            "PaddingTop": "4pt",
+                            "PaddingBottom": "2pt"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true,
+                          "UserSort": {
+                            "SortExpression": {
+                              "Value": "=Fields!Sales_20_SalesTerritory_TerritoryID.Value"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Height": "0.25in",
+                  "TablixCells": [
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textbox5573c95bd5b749b48a270341d813a773",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "=Fields!Sales_20_SalesTerritory_SalesYTD.Value",
+                                  "Style": {
+                                    "Color": "=If(RowNumber(Nothing) Mod 2 <> 0, Variables!Style_FontColorValues1.Value, Variables!Style_FontColorValues2.Value)",
+                                    "Format": "$#,0.###############;($#,0.###############);$#,0.###############"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "DataElementName": "Sales_SalesTerritory_SalesYTD",
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Style": "None"
+                            },
+                            "BottomBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridHorizontalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridHorizontalWeight.Value"
+                            },
+                            "LeftBorder": {
+                              "Color": "=If(RowNumber(Nothing) Mod 2 <> 0, Variables!Style_BackColorValues1.Value, Variables!Style_BackColorValues2.Value)",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=If(RowNumber(Nothing) Mod 2 <> 0, Variables!Style_BackColorValues1.Value, Variables!Style_BackColorValues2.Value)",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "5pt",
+                            "PaddingTop": "=Variables!Style_RowPadding.Value",
+                            "PaddingBottom": "=Variables!Style_RowPadding.Value"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true
+                        }
+                      }
+                    },
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textboxafc358811d57471aa858a6c12cd9a1bb",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "=Fields!Sales_20_SalesTerritory_TerritoryID.Value",
+                                  "Style": {
+                                    "Color": "=If(RowNumber(Nothing) Mod 2 <> 0, Variables!Style_FontColorValues1.Value, Variables!Style_FontColorValues2.Value)",
+                                    "Format": "0"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "DataElementName": "Sales_SalesTerritory_TerritoryID",
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Style": "None"
+                            },
+                            "BottomBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridHorizontalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridHorizontalWeight.Value"
+                            },
+                            "LeftBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=If(RowNumber(Nothing) Mod 2 <> 0, Variables!Style_BackColorValues1.Value, Variables!Style_BackColorValues2.Value)",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "5pt",
+                            "PaddingTop": "=Variables!Style_RowPadding.Value",
+                            "PaddingBottom": "=Variables!Style_RowPadding.Value"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Height": "0.25in",
+                  "TablixCells": [
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textbox97ffa195ffce4e619abbe54eb41f1634",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "=Aggregate(Fields!Sales_20_SalesTerritory_SalesYTD.Value)",
+                                  "Style": {
+                                    "FontFamily": "Segoe UI Semibold",
+                                    "FontSize": "11pt",
+                                    "Color": "=Variables!Style_FontColorHeaders.Value",
+                                    "Format": "$#,0.###############;($#,0.###############);$#,0.###############"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Color": "=Variables!Style_OutlineColor.Value",
+                              "Style": "=If(Variables!Style_HeaderEnableBorderBottom.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=If(Variables!Style_HeaderBorderBottomWeight.Value = \"\",             Variables!Style_GridHorizontalWeight.Value, Variables!Style_HeaderBorderBottomWeight.Value)"
+                            },
+                            "BottomBorder": {
+                              "Style": "None"
+                            },
+                            "LeftBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=Variables!Style_BackColorHeaders.Value",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "2pt",
+                            "PaddingTop": "4pt",
+                            "PaddingBottom": "2pt"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true,
+                          "DataElementName": "Total"
+                        }
+                      }
+                    },
+                    {
+                      "CellContents": {
+                        "ReportItem": {
+                          "Type": "Textbox",
+                          "Name": "Textboxd55f6e7b85b84f09b96e4d620729c8bd",
+                          "Paragraphs": [
+                            {
+                              "TextRuns": [
+                                {
+                                  "Value": "",
+                                  "Style": {
+                                    "FontFamily": "Segoe UI Semibold",
+                                    "FontSize": "11pt",
+                                    "Color": "=Variables!Style_FontColorHeaders.Value",
+                                    "Format": "0"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "Style": {
+                            "Border": {
+                              "Style": "None"
+                            },
+                            "TopBorder": {
+                              "Color": "=Variables!Style_OutlineColor.Value",
+                              "Style": "=If(Variables!Style_HeaderEnableBorderBottom.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=If(Variables!Style_HeaderBorderBottomWeight.Value = \"\",             Variables!Style_GridHorizontalWeight.Value, Variables!Style_HeaderBorderBottomWeight.Value)"
+                            },
+                            "BottomBorder": {
+                              "Style": "None"
+                            },
+                            "LeftBorder": {
+                              "Color": "=Variables!Style_GridColor.Value",
+                              "Style": "=If(Variables!Style_GridVerticalEnabledTable.Value = \"true\", \"Solid\", \"None\")",
+                              "Width": "=Variables!Style_GridVerticalWeight.Value"
+                            },
+                            "BackgroundColor": "=Variables!Style_BackColorHeaders.Value",
+                            "PaddingLeft": "2pt",
+                            "PaddingRight": "2pt",
+                            "PaddingTop": "4pt",
+                            "PaddingBottom": "2pt"
+                          },
+                          "CanGrow": true,
+                          "KeepTogether": true,
+                          "DataElementName": "Total"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "ShowGrandTotals": true,
+              "PreviewDataType": "Summarized"
+            },
+            "TablixColumnHierarchy": {
+              "TablixMembers": [
+                {},
+                {}
+              ]
+            },
+            "TablixRowHierarchy": {
+              "TablixMembers": [
+                {
+                  "Group": null,
+                  "KeepWithGroup": 2,
+                  "RepeatOnNewPage": true
+                },
+                {
+                  "Group": {
+                    "Name": "Details"
+                  }
+                },
+                {
+                  "Group": null,
+                  "KeepWithGroup": 1,
+                  "RepeatOnNewPage": true
+                }
+              ]
+            },
+            "Top": "0mm",
+            "Left": "0"
+          }
+        ],
+        "Height": "2.25in"
+      },
+      "Width": "6in",
+      "Page": {
+        "LeftMargin": "0.5in",
+        "RightMargin": "0.5in",
+        "TopMargin": "0.5in",
+        "BottomMargin": "0.5in"
+      }
+    }
+  ],
+  "ReportParametersLayout": {
+    "GridLayoutDefinition": {
+      "NumberOfColumns": 4,
+      "NumberOfRows": 2
+    }
+  },
+  "Language": "=User!Language",
+  "DefaultView": "Paginated",
+  "AuthoringMetadata": {
+    "CreatedBy": {
+      "Name": "WebAuthoring",
+      "Version": "2023.6.2.757"
+    },
+    "UpdatedBy": {
+      "Name": "WebAuthoring",
+      "Version": "2023.6.2.757"
+    },
+    "LastModifiedTimestamp": "2023-05-18T23:49:47.057Z"
+  },
+  "FilterSelections": [
+    {
+      "DatasetName": "DataSet1",
+      "DataSourceName": "DataSource1",
+      "EntityName": "Sales SalesTerritory",
+      "PropertyName": "SalesYTD",
+      "FilterOperator": "In",
+      "FilterType": "Basic",
+      "FilterValues": []
+    },
+    {
+      "DatasetName": "DataSet1",
+      "DataSourceName": "DataSource1",
+      "EntityName": "Sales SalesTerritory",
+      "PropertyName": "TerritoryID",
+      "FilterOperator": "In",
+      "FilterType": "Basic",
+      "FilterValues": []
+    }
+  ],
+  "Variables": [
+    {
+      "Name": "Theme_BackGroundColor",
+      "Value": "#FFFFFF"
+    },
+    {
+      "Name": "Theme_ForeGroundColor",
+      "Value": "#252423"
+    },
+    {
+      "Name": "Theme_TableAccentColor",
+      "Value": "#118DFF"
+    },
+    {
+      "Name": "Style_OutlineColor",
+      "Value": "#118DFF"
+    },
+    {
+      "Name": "Style_GridColor",
+      "Value": "#E5E5E5"
+    },
+    {
+      "Name": "Style_GridVerticalEnabledTable",
+      "Value": "false"
+    },
+    {
+      "Name": "Style_GridVerticalWeight",
+      "Value": "0pt"
+    },
+    {
+      "Name": "Style_GridHorizontalEnabledTable",
+      "Value": "true"
+    },
+    {
+      "Name": "Style_GridHorizontalWeight",
+      "Value": "0.5pt"
+    },
+    {
+      "Name": "Style_HeaderEnableBorderBottom",
+      "Value": "true"
+    },
+    {
+      "Name": "Style_HeaderBorderBottomWeight",
+      "Value": "1.0pt"
+    },
+    {
+      "Name": "Style_BackColorHeaders",
+      "Value": "#FFFFFF"
+    },
+    {
+      "Name": "Style_FontColorHeaders",
+      "Value": "#252423"
+    },
+    {
+      "Name": "Style_BackColorValues1",
+      "Value": "#FFFFFF"
+    },
+    {
+      "Name": "Style_BackColorValues2",
+      "Value": "#EEEDED"
+    },
+    {
+      "Name": "Style_FontColorValues2",
+      "Value": "#252423"
+    },
+    {
+      "Name": "Style_FontColorValues1",
+      "Value": "#252423"
+    },
+    {
+      "Name": "Style_RowPadding",
+      "Value": "3pt"
+    }
+  ],
+  "ThemeName": "default",
+  "DataSets": [
+    {
+      "Name": "DataSet1",
+      "Query": {
+        "DataSourceName": "DataSource1",
+        "CommandText": "DEFINE VAR __DS0Core = \r\n\tSUMMARIZECOLUMNS(\r\n\t\tROLLUPADDISSUBTOTAL('Sales SalesTerritory'[TerritoryID], \"IsGrandTotalRowTotal\"),\r\n\t\t\"SumSalesYTD\", CALCULATE(SUM('Sales SalesTerritory'[SalesYTD]))\r\n\t)\r\n\r\nEVALUATE\r\n\t__DS0Core\r\n\r\nORDER BY\r\n\t[IsGrandTotalRowTotal] DESC, 'Sales SalesTerritory'[TerritoryID]",
+        "PreviewCommandText": "DEFINE\r\n\tVAR __DS0Core = \r\n\t\tSUMMARIZECOLUMNS(\r\n\t\t\tROLLUPADDISSUBTOTAL('Sales SalesTerritory'[TerritoryID], \"IsGrandTotalRowTotal\"),\r\n\t\t\t\"SumSalesYTD\", CALCULATE(SUM('Sales SalesTerritory'[SalesYTD]))\r\n\t\t)\r\n\r\n\tVAR __DS0BodyLimited = \r\n\t\tTOPN(500, __DS0Core, [IsGrandTotalRowTotal], 0, 'Sales SalesTerritory'[TerritoryID], 1)\r\n\r\nEVALUATE\r\n\t__DS0BodyLimited\r\n\r\nORDER BY\r\n\t[IsGrandTotalRowTotal] DESC, 'Sales SalesTerritory'[TerritoryID]"
+      },
+      "Fields": [
+        {
+          "Name": "Sales_20_SalesTerritory_SalesYTD",
+          "DataField": "[SumSalesYTD]",
+          "AggregateIndicatorField": null
+        },
+        {
+          "Name": "Sales_20_SalesTerritory_TerritoryID",
+          "DataField": "Sales SalesTerritory[TerritoryID]",
+          "AggregateIndicatorField": "x_5b_IsGrandTotalRowTotal_5d_"
+        },
+        {
+          "Name": "x_5b_IsGrandTotalRowTotal_5d_",
+          "DataField": "[IsGrandTotalRowTotal]"
+        }
+      ],
+      "InterpretSubtotalsAsDetails": 2
+    }
+  ]
+}
